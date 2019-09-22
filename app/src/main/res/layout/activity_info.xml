@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draw"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.thumbnaildownloader.MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF5252">
+
+        <Button
+            android:id="@+id/hit"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/menu"
+            android:onClick="hj" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/infosplash"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/pacifico"
+                android:text="Thumbnail Downloader"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/gmail"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="120dp"
+                    android:onClick="gmail"
+                    android:src="@drawable/gmail"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="4dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/insta"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="50dp"
+                    android:onClick="insta"
+                    android:src="@drawable/instagram"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="4dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/kanir"
+                    android:text="Open Source :"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/gaya"
+                    android:text="OkHTTP, Picasso, CircleImageView, Android Flat Button"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/cinzelbla"
+                android:text="Developed By Harish.V"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navs"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_head"
+        app:menu="@menu/nav_menu"></android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
